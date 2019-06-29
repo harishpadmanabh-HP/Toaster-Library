@@ -3,9 +3,13 @@ package com.example.toasterlibrary;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Typeface;
 import android.widget.Toast;
+import com.mrntlu.toastie.*;
+
 
 public class ToasterMessage {
+
 
     public static void toaster(Context c, String message){
 
@@ -13,29 +17,35 @@ public class ToasterMessage {
 
     }
 
-    public static void showExitDiaolog(final Context c)
+
+
+    public static void warningToaster(Context c, String message,String postionOfToast) {
+
+
+
+        if(postionOfToast.equalsIgnoreCase("bottom"))
         {
+            Toastie.warning(c,message, Toast.LENGTH_LONG).show();
 
-            AlertDialog.Builder builder;
-            builder = new AlertDialog.Builder(c);
+        }
+        else if(postionOfToast.equalsIgnoreCase("centre"))
+        {
+            Toastie.centerWarning(c,message, Toast.LENGTH_LONG).show();
 
-            builder.setMessage("Do you want to close this application ?")
-                    .setCancelable(false)
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            Toast.makeText(c,"you choose yes action for alertbox",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    })
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            //  Action for 'NO' Button
-                            dialog.cancel();
-                            Toast.makeText(c,"you choose no action for alertbox",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    });
+        }
+        else if(postionOfToast.equalsIgnoreCase("top"))
+        {
+            Toastie.topWarning(c,message, Toast.LENGTH_LONG).show();
+
+        }
+        else
+        {
+            Toastie.warning(c,message, Toast.LENGTH_LONG).show();
 
         }
 
-}
+
+
+    }
+
+    }
