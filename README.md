@@ -19,7 +19,7 @@ Add jitpack in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-                  implementation 'com.github.harishpadmanabh-HP:Toaster-Library:2.0'
+                  implementation 'com.github.harishpadmanabh-HP:Toaster-Library:2.1'
 	}
   
   Then you can use simply 
