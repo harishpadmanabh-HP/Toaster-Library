@@ -134,7 +134,7 @@ public class ToasterMessage {
                     .setCardElevation(10)
                     .setIcon(icon)
                     .setCardBackgroundColor(cardBackcolor)
-                    .setMessage("Fully customizable toast. But in a different way.")
+                    .setMessage(message)
                     .setGravity(Gravity.CENTER,5,5)
                     .createToast(Toast.LENGTH_LONG)
                     .show();
@@ -148,7 +148,7 @@ public class ToasterMessage {
                     .setCardElevation(10)
                     .setIcon(icon)
                     .setCardBackgroundColor(cardBackcolor)
-                    .setMessage("Fully customizable toast. But in a different way.")
+                    .setMessage(message)
                     .setGravity(Gravity.TOP,5,5)
                     .createToast(Toast.LENGTH_LONG)
                     .show();
@@ -162,7 +162,7 @@ public class ToasterMessage {
                     .setCardElevation(10)
                     .setIcon(icon)
                     .setCardBackgroundColor(cardBackcolor)
-                    .setMessage("Fully customizable toast. But in a different way.")
+                    .setMessage(message)
                     .setGravity(Gravity.BOTTOM,5,5)
                     .createToast(Toast.LENGTH_LONG)
                     .show();
